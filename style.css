@@ -1,0 +1,147 @@
+:root {
+    --background: #111418;
+    --highlight: #fff;
+    --highlight-dark: #000;
+    --font-color: var(--highlight);
+    --base-color: aquamarine;
+}
+
+.dark-highlight {
+    color: var(--highlight-dark)
+}
+
+.highlight {
+    color: var(--highlight);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-padding: 0;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.hero {
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 60vw;
+    max-width: 70vw;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(aquamarine, black);
+    opacity: .2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.odinLogo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+}
+.odinLogo img {
+    width: clamp(40px, 8%, 60px);
+}
+
+main {
+    background-color: var(--background);
+    width: 40vw;
+    height: 100vh;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+form {
+    border: 1px solid var(--highlight);
+    border-radius: 4px;
+    padding: 25px;
+    width: clamp(250px, min-content, 60%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+legend,
+span {
+    font-size: 2.5rem;
+}
+
+span {
+    color: var(--base-color);
+}
+
+form p {
+    font-size: 1.2rem;
+}
+
+fieldset {
+    border: none;
+    position: relative;
+}
+
+label {
+    position: absolute;
+    padding: 5px;
+    line-height: 1.5rem;
+}
+
+input {
+    width: 100%;
+    line-height: 1.5rem;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid var(--highlight);
+    border-radius: 4px;
+    color: var(--highlight);
+    letter-spacing: 1px;
+}
+
+button,
+.signed-in {
+    align-self: center;
+}
+
+button {
+    padding: 10px 24px;
+    width: clamp(25px, 50%, 50%);
+    background-color: var(--base-color);
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover {
+    
+}
+
+a {
+    color: var(--base-color);
+    font-weight: 600;
+    text-decoration: none;
+}
